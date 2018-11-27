@@ -1,0 +1,66 @@
+/* ************************ */
+
+
+.jd_layout{
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    /* 搜索块 */
+    .jd_search{
+        position: fixed;
+        width: 100%;
+        max-width: 640px;
+        height: 40px;
+        background-color: #e92322;
+        z-index: 999;
+        .jd_logo{
+            position: absolute;
+            width: 56px;
+            height: 30px;
+            left: 10px;
+            top: 5px;
+            background: url(../images/jd-sprites.png)no-repeat;
+            background-size: 200px 200px;//除了cover、contain，还可以直接设置背景图的宽高
+            background-position: 0px -108px;
+        }
+        .jd_login{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 40px;
+            color: #fff;
+            text-align: center;
+        }
+        .jd_searchBox{
+            width: 100%;//中间自适应宽度，两次固定宽度写法之一，前提：box-sizing：border-box
+            height: 40px;
+            padding-left: 76px;
+            padding-right: 40px;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 80px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 27px;
+                height: 23px;
+                background: url(../images/jd-sprites.png);
+                background-size: 200px 200px;
+                background-position: -56px -108px;
+            }
+            >input{
+
+                width: 100%;
+                height: 30px;
+                margin-top: 5px;
+                border-radius: 15px;
+                padding-left: 30px;
+                color: #666;
+            }
+        }
+    }
+}

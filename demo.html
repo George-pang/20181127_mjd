@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>两侧定宽，中间自适应宽度</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 40px;
+        }
+        .box{
+            position: relative;
+            background-color: #ccc;
+        }
+        .box_left{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            background-color: red;
+        }
+        .box_right{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50px;
+            background-color: green;
+        }
+        .box_middle{
+            /* 注意,用margin这种方法不能设置width */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box_left">左</div>
+        <div class="box_middle">中</div>
+        <div class="box_right">右</div>
+    </div>
+</body>
+</html>
